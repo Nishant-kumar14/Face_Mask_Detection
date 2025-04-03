@@ -62,6 +62,7 @@ Go to http://127.0.0.1:5000/ in your web browser.
 #### │── face_mask_detector.h5  (Trained CNN model)
 #### │── requirements.txt (Dependencies)
 #### │── Procfile        (For Render Deployment)
+#### │── README.md       (Project Documentation)
 
 ## **📜 License**
 This project is open-source and available under the MIT License.
