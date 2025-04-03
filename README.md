@@ -29,10 +29,13 @@
 
 ### 🎯 **Prediction Output**  
 > *Shows "Mask Detected" or "No Mask Detected" based on the input image.* 
+![Screenshot 2025-04-03 143111](https://github.com/user-attachments/assets/e30fbbef-a336-4417-9209-3021f8fbf78b)
 
+![Screenshot 2025-04-03 143244](https://github.com/user-attachments/assets/bf82f2e6-d387-410b-8af9-201352450102)
 
 ### 🎯 **Live Camera Detection**  
 > *Real-time detection through webcam!*  
+![d8ce0480-9ac0-11ea-8062-809a1b8bfab6](https://github.com/user-attachments/assets/812e61fd-eb6f-4a7b-87e7-4445741a0fc9)
 
 ## **🚀 How to Run Locally**
 ### **🔹 Step 1: Clone the Repository**
