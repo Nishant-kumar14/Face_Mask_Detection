@@ -42,6 +42,7 @@
 ## **🚀 How to Run Locally**
 ### **🔹 Step 1: Clone the Repository**
 git clone https://github.com/yourusername/face-mask-detection.git
+
 cd face-mask-detection
 ### **🔹 Step 2: Install Dependencies**
 pip install -r requirements.txt
