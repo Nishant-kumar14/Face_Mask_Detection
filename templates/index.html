@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mask Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Background Image */
+        body {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        background: url('https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-simple-and-intelligent-facial-recognition-advertising-background-backgroundintelligentadvancedlight-spottechnological-senseface-image_82888.jpg') no-repeat center center/cover;
+        background-size: cover;  /* Ensures full coverage */
+        background-position: center;  /* Centers the image */
+        background-attachment: fixed;  /* Keeps background fixed when scrolling */
+        height: 100vh;  /* Ensures full viewport height */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+         }
+
+
+        /* Transparent Form Container */
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2 {
+        color: #ffffff;  /* White for clear visibility */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);  /* Adds a slight glow for better readability */
+        font-family: 'Poppins', sans-serif; /* Attractive font */
+        }
+
+
+        input[type="file"] {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button {
+            background: #ff9800;
+            color: white;
+            font-size: 18px;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .live-camera {
+            margin-top: 20px;
+        }
+
+        .live-camera button {
+            background: #4caf50;
+        }
+
+        .live-camera button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Mask Detection</h1>
+    <div class="container">
+        <h2>Upload an Image</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Upload & Predict</button>
+        </form>
+
+        {% if filename %}
+            <h2>Uploaded Image:</h2>
+            <img src="{{ url_for('uploaded_file', filename=filename) }}" width="300">
+            <p class="result" style="color: {% if label == 'Mask Detected' %}green{% else %}red{% endif %};">
+                Prediction: {{ label }}
+            </p>
+        {% endif %}
+
+        <h2>Or Check Live Camera</h2>
+        <div class="live-camera">
+            <a href="{{ url_for('live') }}">
+                <button>Start Live Detection</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

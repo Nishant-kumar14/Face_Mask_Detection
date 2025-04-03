@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Face Mask Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Background Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://dce0qyjkutl4h.cloudfront.net/wp-content/uploads/2022/05/Facial-Recognition.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Overlay Effect */
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Live Stream Styling */
+        .live-container {
+            margin-top: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+            width: 100%;
+            max-width: 640px;
+        }
+
+        /* Button Styling */
+        button {
+            background: #ff9800;
+            color: white;
+            font-size: 18px;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Live Face Mask Detection</h1>
+        <div class="live-container">
+            <img src="{{ url_for('video_feed') }}" alt="Live Camera Feed">
+        </div>
+        <br>
+        <a href="{{ url_for('upload_file') }}">
+            <button>🔙 Back to Upload</button>
+        </a>
+    </div>
+</body>
+</html>
