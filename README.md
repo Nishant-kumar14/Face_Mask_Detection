@@ -10,8 +10,7 @@
 ## **✨ Features**  
 ✅ **Upload & Predict** – Upload an image, and the model will classify it as **"Mask"** or **"No Mask"**.  
 ✅ **Live Camera Detection** – Use your webcam to detect face masks in real-time.  
-✅ **Attractive UI** – A beautifully designed interface for a seamless user experience.  
-✅ **Deployed on Render** – Access it from anywhere using a shared link.  
+✅ **Attractive UI** – A beautifully designed interface for a seamless user experience.   
 
 ---
 
@@ -19,8 +18,7 @@
 🖥️ **Frontend** – HTML, CSS, Bootstrap  
 ⚙️ **Backend** – Flask (Python)  
 📦 **Deep Learning Model** – Convolutional Neural Networks (CNN)  
-📷 **Computer Vision** – OpenCV for image processing  
-☁️ **Deployment** – Render  
+📷 **Computer Vision** – OpenCV for image processing    
 
 ---
 
@@ -61,7 +59,6 @@ Go to http://127.0.0.1:5000/ in your web browser.
 #### │── app.py          (Main Flask application)
 #### │── face_mask_detector.h5  (Trained CNN model)
 #### │── requirements.txt (Dependencies)
-#### │── Procfile        (For Render Deployment)
 #### │── README.md       (Project Documentation)
 
 ## **📜 License**
