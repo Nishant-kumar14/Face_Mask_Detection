@@ -59,6 +59,7 @@ Go to http://127.0.0.1:5000/ in your web browser.
 #### │── app.py          (Main Flask application)
 #### │── face_mask_detector.h5  (Trained CNN model)
 #### │── requirements.txt (Dependencies)
+#### │── Face.ipynb (ipynb file)
 #### │── README.md       (Project Documentation)
 
 ## **📜 License**
